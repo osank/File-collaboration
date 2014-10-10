@@ -1,0 +1,133 @@
+<html>
+<head>
+
+<link rel=stylesheet type="text/css" href="style.css"> 
+<script>
+
+function myFunction()
+{
+	var s1=document.e.f2.value;
+	var s2=document.e.f3.value;
+	//out.println(s2);
+	if(s2!="qwerty")
+		{
+		alert("wrong Admin password");
+			return false;
+		}
+	alert("Extension blocked");
+	return true;
+}
+
+</script>
+
+
+<script>
+
+function myFunction1()
+{
+	var s1=document.e1.f2.value;
+	var s2=document.e1.f5.value;
+	//out.println(s2);s
+	if(s2!="qwerty")
+		{
+		alert("wrong Admin password");
+			return false;
+		}
+	alert("Extension blocked");
+	return true;
+	
+	
+}
+function myFunction2()
+{
+	var s1=document.e2.f2.value;
+	var s2=document.e2.f7.value;
+	//out.println(s2);
+	if(s2!="qwerty")
+		{
+		alert("wrong Admin password");
+			return false;
+		}
+	alert("Extension blocked");
+	return true;
+	
+	
+}
+
+</script>
+<script type="text/javascript">
+
+
+function fd()
+{
+var s=document.f.f1.value;
+if(s.substring(s.length-3,s.length)==p[0])
+	{
+	alert("Invalid fileExtesion");
+	return false;
+}
+if(s.substring(s.length-3,s.length)==p[1])
+{
+alert("Invalid fileExtesion");
+return false;
+}
+if(s.substring(s.length-3,s.length)==p[3])
+{
+alert("Invalid fileExtesion");
+return false;
+}
+
+if(s=="")
+{
+alert("filepath should be specified");
+	return false;
+}
+return true;
+}
+</script><center>
+
+<table width=95% height=2% border=0 cellspacing=0>
+<tr>
+<td bgcolor="#E65959" width=100% height=2%></td>
+</tr>
+</table>
+</head>  
+ <body bgcolor="#56b4c9">
+ 
+ 
+ <form  ENCTYPE="multipart/form-data" action="upload.jsp" method=post name=f onSubmit="return fd()"><br><br><br>
+          <center>
+              <b>Choose the file To Upload:</b><br><br></center>
+			<center><input name=f1 type=file ><br>
+</center><br><center><input type="submit" value="Upload" class="button2"></center><br><br><br>
+
+          </form>
+          
+          
+          
+          <form action="NewFile3.jsp" method="post" name=e onsubmit="return myFunction()">
+         <b> </center><input name=f2  type=text  value="Extension To Block">
+<input name=f3  type=password  value="ADMIN Password">
+block  ext<input type=radio name=type   value=block   >
+Unblock  ext<input type=radio name=type value=unblock  >
+<input type="Submit"  value="Submit"   > </button>
+
+          </form>
+          
+          
+           <form action="NewFile5.jsp" method="post" name=e2 onsubmit="return myFunction2()">
+          </center><input name=f6  type=text  value="block user">
+<input name=f7 type=password  value="ADMIN Password">
+block user<input type=radio name=type   value=block   >
+Unblock user<input type=radio name=type value=unblock >
+<input type="Submit"  value="Submit"   > </button>
+
+          </form>
+         
+         
+         
+         
+         
+          
+    	</body>
+</html>

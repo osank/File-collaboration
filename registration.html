@@ -1,0 +1,90 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript">
+function fd()
+{
+var s=document.f1.nm.value;
+var s1=document.f1.uid.value;
+var s2=document.f1.pass.value;
+var s4=document.f1.eid.value;
+var s3=document.f1.gen;
+var re=/^.+@.+\..{3}$/;
+
+if(s=="")
+{
+alert("Name should be specified");
+return false;
+}
+if(s3[0].checked==false&&s3[1].checked==false)
+{	
+alert("gender should be specified");
+return false;
+}
+
+if(s1=="")
+	{
+	alert("UserId should be specified");
+	return false;
+	}
+if(s2=="")
+	{	
+	alert("Password should be specified");
+	return false;
+	}
+if(s4=="")
+	{
+	alert("Email should be specified");
+	return false;
+	}
+	
+if(re.test(s4)==false)
+	{
+	alert("Email should be specified in valid format");
+	return false;
+	}
+return true;
+}
+</script>
+<center>
+<table width=95% height=2% border=0 cellspacing=0>
+<tr>
+<td bgcolor="#E65959" width=100% height=2%></td>
+</tr>
+</table>
+</center>
+</head>
+<body bgcolor="#56b4c9"><center>
+<form name=f1 action="register1.jsp" method=post onSubmit="return fd()">
+<table>
+<tr>
+<td><font size=4 color=black>
+Name:</td><td><input type=text name=nm >
+</td>
+</tr><br>
+<tr>
+<td><font size=4 color=black>
+Gender:</td><td><b> Male<input type=radio name=gen value=Male checked><b> Female<input type=radio name=gen value=Female>
+</td>
+</tr>
+<tr>
+<td><font size=4 color=black>
+UserID:</td><td><input type=text name=uid>
+</td>
+</tr><br>
+<tr>
+<td><font size=4 color=black>
+Password:</td><td><input type=password name=pass ></td>
+</tr><br>
+<tr>
+<td><font size=4 color=black>
+EmailId:</td><td><input type=text name=eid>
+</td>
+</tr>
+</table><br>
+<input type=submit name=submit value=Submit class="button2">
+<input type=reset name=reset value=Reset class="button2"></form>
+</font>
+</center>	
+</html>
+

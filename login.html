@@ -1,0 +1,50 @@
+<html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript">
+function fd()
+{
+var s=document.f1.t1.value;
+var s1=document.f1.t2.value;
+if(s=="")
+{
+alert("UserId should be specified");
+return false;
+}
+if(s1=="")
+{
+alert("Password should be specified");
+return false;
+}
+}
+</script>
+<center>
+<table width=95% height=2% border=0 cellspacing=0>
+<tr>
+<td bgcolor="#E65959" width=100% height=2%></td></tr>
+</table>
+          
+</center>	
+</head>
+<body bgcolor="#56b4c9"><center><br><br>
+<form name=f1 action="login.jsp" method=post onSubmit="return fd()">
+<table>
+<tr>
+<td><font size=4 color=black>
+UserId:</td><td><input type=text name=t1 >
+</td>
+</tr>  <br>
+<tr>
+<td><font size=4 color=black>
+Password:</td><td><input type=password name=t2></td>
+</tr>
+</table>     <br><br>
+<input type=submit name=submit value=Submit class="button2">
+<input type=reset name=reset value=Reset class="button2">
+</form>
+</font>
+</center>
+</body>
+</html>
+
